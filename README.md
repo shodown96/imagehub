@@ -4,7 +4,7 @@
 
 ### How to Launch
 
--   Create a `/server/.env` file add in the following keys.
+-   Create a `/server/.env` file and add in the following keys.
 
 ```
 MONGODB_URL
