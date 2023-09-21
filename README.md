@@ -11,9 +11,13 @@ MONGODB_URL
 CLOUDINARY_CLOUD_NAME
 CLOUDINARY_API_KEY
 CLOUDINARY_API_SECRET
-REACT_APP_PUBLIC_SERVER
 ```
 
+-   Create a `/client/.env` file and add in this keys.
+
+```
+VITE_PUBLIC_SERVER
+```
 -   To install dependencies, run
 
 ```
