@@ -43,12 +43,17 @@ const CreatePost = () => {
         const data = await response.json();
         setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}` });
       } catch (err) {
-        alert(err);
+        // alert(err);
+        if(typeof(err) === 'string'){
+          if(err.toLowerCase().includes("bill")){
+            toast.error('The quota for generating images under the allocated testing billing plan has been exhausted.')
+          }
+        }
       } finally {
         setGeneratingImg(false);
       }
     } else {
-      alert('Please provide proper prompt');
+        toast.error('Please provide proper prompt.')
     }
   };
 
@@ -70,8 +75,8 @@ const CreatePost = () => {
         toast.success('Yayyyy, thank you for contributing to the community.')
         navigate('/');
       } catch (err) {
-        alert(err);
-        toast.success('Oops, something went wrong.')
+        // alert(err);
+        toast.error('Oops, something went wrong.')
       } finally {
         setLoading(false);
       }
