@@ -1,6 +1,6 @@
 # A Full Stack MERN AI Image Generation App - MidJourney & DALL E Clone
 
-![Image Generation App](./ImageHub.png)
+![ImageHub](./ImageHub.png)
 
 ### How to Launch
 
