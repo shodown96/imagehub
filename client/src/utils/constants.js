@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:8080/api/v1' : import.meta.env.VITE_PUBLIC_SERVER
+const BASE_URL = !(process.env.NODE_ENV === 'development') ? 'http://localhost:8080/api/v1' : import.meta.env.VITE_PUBLIC_SERVER
 
 export const appConfig = {
     API_ENDPOINTS: {
